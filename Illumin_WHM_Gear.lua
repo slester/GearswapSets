@@ -8,13 +8,6 @@ function user_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None','DualWeapons','MeleeWeapons')
 
-	gear.obi_cure_waist = ""
-	gear.obi_cure_back = "Alaunus's Cape"
-
-	gear.obi_nuke_waist = ""
-	gear.obi_high_nuke_waist = ""
-	gear.obi_nuke_back = ""
-
 		-- Additional local binds
 	send_command('bind ^` input /ma "Arise" <t>')
 	send_command('bind !` input /ja "Penury" <me>')
@@ -25,9 +18,6 @@ function user_setup()
 	send_command('bind !pause gs c toggle AutoSubMode') --Automatically uses sublimation.
 	send_command('bind !backspace input /ja "Accession" <me>')
 	send_command('bind != input /ja "Sublimation" <me>')
-	send_command('bind ^delete input /ja "Dark Arts" <me>')
-	send_command('bind !delete input /ja "Addendum: Black" <me>')
-	send_command('bind @delete input /ja "Manifestation" <me>')
 	send_command('bind ^\\\\ input /ma "Protectra V" <me>')
 	send_command('bind @\\\\ input /ma "Shellra V" <me>')
 	send_command('bind !\\\\ input /ma "Reraise IV" <me>')
@@ -35,13 +25,8 @@ function user_setup()
     select_default_macro_book()
 end
 
--- Define sets and vars used by this job file.
 function init_gear_sets()
-    --------------------------------------
-    -- Start defining the sets
-    --------------------------------------
-
-    sets.Kiting = {feet="Herald's Gaiters"}
+    sets.Kiting = { feet = "Herald's Gaiters" }
     sets.latent_refresh = {body="Theo. Briault +3", waist="Fucho-no-obi",ammo="Homiliary",legs="Assiduity Pants +1"}
 	sets.latent_refresh_grip = {}
 	sets.TPEat = {}
